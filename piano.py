@@ -5,32 +5,19 @@ import winsound
 ser = serial.Serial('COM13', 9600)
 
 while True:
-    A0 = ser.readline()
-    A0 = int(A0)
-    if A0<800:
-        print(A0)
 
-    A1 = ser.readline()
-    A1 = int(A1)
-    if A1<800:
-        print(A1)
+    var = ser.readline()
+    var = float(var)
 
-    A2 = ser.readline()
-    A2 = int(A2)
-    if A2<800:
-        print(A2)
-
-    A3 = ser.readline()
-    A3 = int(A3)
-    if A3<800:
-        print(A3)
-
-    A4 = ser.readline()
-    A4 = int(A4)
-    if A4<800:
-        print(A4)
-    
-    A5 = ser.readline()
-    A5 = int(A5)
-    if A5<800:
-        print(A5)
+    if var==1:
+        winsound.PlaySound("res\piano\A0.wav", winsound.SND_ALIAS)
+    if var==2:
+        winsound.PlaySound("res\piano\A1.wav", winsound.SND_ALIAS)
+    if var==3:
+        winsound.PlaySound("res\piano\A2.wav", winsound.SND_ALIAS)
+    if var==4:
+        winsound.PlaySound("res\piano\A3.wav", winsound.SND_ALIAS)
+    if var==5:
+        winsound.PlaySound("res\piano\A4.wav", winsound.SND_ALIAS)
+    if var==6:
+        winsound.PlaySound("res\piano\A5.wav", winsound.SND_ALIAS)
