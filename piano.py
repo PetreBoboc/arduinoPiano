@@ -9,7 +9,7 @@ while True:
     var = ser.readline()
     var = float(var)
 
-    instrument = 1
+    instrument = 0 # 0 = piano; 1 = drum machine
 
     if instrument==0:
         if var==1:
